@@ -3,7 +3,6 @@ import re
 from os import system, name
 from cores import cor
 from estilo import estilo
-from os import getlogin
 from ajuda import ajuda
 
 
@@ -58,9 +57,9 @@ def baixa(link, indice=None):
                     print(f'Baixando...{porcent:.0f}%', end='\r')
                     mediabytes = requests.get(midia).content
                     if '.jpg' in midia:
-                        open(f'C:/Users/{user}/Downloads/{nome}.jpg', 'wb').write(mediabytes)
+                        open(f'Downloads/{nome}.jpg', 'wb').write(mediabytes)
                     elif '.mp4' in midia:
-                        open(f'C:/Users/{user}/Downloads/{nome}.mp4', 'wb').write(mediabytes)
+                        open(f'Downloads/{nome}.mp4', 'wb').write(mediabytes)
             else:
                 for n in indice:
                     try:
@@ -76,9 +75,9 @@ def baixa(link, indice=None):
                         print(f'Baixando...{porcent:.0f}%', end='\r')
                         mediabytes = requests.get(pics[n-1]).content
                         if '.jpg' in pics[n-1]:
-                            open(f'C:/Users/{user}/Downloads/{nome}.jpg', 'wb').write(mediabytes)
+                            open(f'Downloads/{nome}.jpg', 'wb').write(mediabytes)
                         elif '.mp4' in pics[n-1]:
-                            open(f'C:/Users/{user}/Downloads/{nome}.mp4', 'wb').write(mediabytes)
+                            open(f'Downloads/{nome}.mp4', 'wb').write(mediabytes)
                     except IndexError:
                         print(cor(f'Nenhuma mídia na posição {n}', 'vermelho'))
                         exit()
@@ -86,7 +85,7 @@ def baixa(link, indice=None):
                         print(cor(f'"{n}" não é uma posição válida. Informe um valor inteiro.', 'vermelho'))
                         exit()
             print('\n')     
-            print(cor('Mídias salvas em downloads.', 'verde'))
+            print(cor('Mídias salvas em Downloads.', 'verde'))
     except KeyboardInterrupt:
         print(cor('Saindo...', 'amarelo'))
 
@@ -96,7 +95,6 @@ if 'nt' not in name:
 else:
     system('cls')
 
-user = getlogin()
 estilo()
 print(cor('Digite "ajuda" (sem as aspas) para obter informações sobre como usar o instaloader.', 'cinza'))
 try:
