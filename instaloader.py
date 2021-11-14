@@ -1,10 +1,11 @@
 import requests
 import re
-from os import system
+from os import system, name
 from cores import cor
 from estilo import estilo
 from os import getlogin
 from ajuda import ajuda
+
 
 def baixa(link, indice=None):
     try:
@@ -90,7 +91,11 @@ def baixa(link, indice=None):
         print(cor('Saindo...', 'amarelo'))
 
 
-system('cls')
+if 'nt' not in name:
+    system('clear')
+else:
+    system('cls')
+
 user = getlogin()
 estilo()
 print(cor('Digite "ajuda" (sem as aspas) para obter informações sobre como usar o instaloader.', 'cinza'))
