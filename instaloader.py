@@ -61,17 +61,17 @@ def baixa(link, indice=None):
                     elif '.mp4' in midia:
                         open(f'Downloads/{nome}.mp4', 'wb').write(mediabytes)
             else:
+                while True:
+                    confirm = input(cor(f'Baixar {len(indice)} das {quantidade} mídias encontradas?(S/N): ', 'amarelo'))[0]
+                    if confirm in 'Ss':
+                        break
+                    elif confirm in 'Nn':
+                        exit()
                 for n in indice:
                     try:
                         n = int(n)
                         nome = pics[n-1].split('_')[1]
                         porcent = porcent + 100/len(indice)
-                        while True:
-                            confirm = input(cor(f'Baixar {len(indice)} das {quantidade} mídias encontradas?(S/N): ', 'amarelo'))[0]
-                            if confirm in 'Ss':
-                                break
-                            elif confirm in 'Nn':
-                                exit()
                         print(f'Baixando...{porcent:.0f}%', end='\r')
                         mediabytes = requests.get(pics[n-1]).content
                         if '.jpg' in pics[n-1]:
