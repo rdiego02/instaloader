@@ -16,6 +16,5 @@ Sintaxe:
         Caso apenas a URL do post seja fornecida, todas as mídias serão baixadas.
 
 
-Tutorial no YouTube - em breve... 
 Entre em contato - roney.diego000@gmail.com
 """, 'amarelo'))
