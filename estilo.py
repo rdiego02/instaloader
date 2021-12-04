@@ -12,6 +12,3 @@ def estilo():
 """, 'ciano'))
     print('\033[0;30;47mFᴇɪᴛᴏ ᴘᴏʀ: Rᴏɴᴇʏ D.\033[m')
     print(cor('\nDigite "ajuda" (sem as aspas) para obter informações sobre como usar o instaloader.', 'cinza'))
-
-
-estilo()
