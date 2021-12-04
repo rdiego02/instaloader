@@ -1,4 +1,4 @@
-Com essa ferramenta é possível baixar mídias do Instagram: reels, imagens ou vídeos do IGTV. Não é possível baixar stories no momento.
+Com essa ferramenta é possível baixar mídias do Instagram (reels, imagens, IGTV). Ainda não é possível baixar stories e nem o perfil inteiro de uma só vez.
 
 Bibliotecas necessárias: requests
 
