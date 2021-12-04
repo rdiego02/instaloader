@@ -1,6 +1,6 @@
 Com essa ferramenta é possível baixar mídias do Instagram: reels, imagens ou vídeos do IGTV. Não é possível baixar stories no momento.
 
-Bibliotecas necessárias: - requests
+Bibliotecas necessárias: requests
 
 Iniciar: 
         python instaloader.py
