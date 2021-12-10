@@ -2,7 +2,7 @@ from cores import cor
 
 def ajuda():
     print(cor("""
-Com essa ferramenta é possível baixar mídias do Instagram: reels, imagens ou vídeos do IGTV. 
+Com essa ferramenta é possível baixar fotos e vídeos do Instagram. 
 Não é possível baixar stories no momento.
 
 Sintaxe: 
@@ -15,6 +15,4 @@ Sintaxe:
 
         Caso apenas a URL do post seja fornecida, todas as mídias serão baixadas.
 
-
-Entre em contato - roney.diego000@gmail.com
 """, 'amarelo'))
